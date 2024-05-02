@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+        <receiver
+            android:name=".ui.SmallCashDeskWidget"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE_ALL" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="action.WIDGET_LOGOUT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/small_cash_desk_widget_info" />
+        </receiver>
+        <receiver
+            android:name=".ui.MediumCashDeskWidget"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE_ALL" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="action.WIDGET_LOGOUT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/medium_cash_desk_widget_info" />
+        </receiver>
+        <receiver
+            android:name=".ui.LargeCashDeskWidget"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE_ALL" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="action.WIDGET_LOGOUT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/large_cash_desk_widget_info" />
+        </receiver>
+
+        <activity
+            android:name=".ui.activity.CashDeskSmallWidgetActivity"
+            android:exported="false"
+            android:theme="@style/Widget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.CashDeskMediumWidgetActivity"
+            android:exported="false"
+            android:theme="@style/Widget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.CashDeskLargeWidgetActivity"
+            android:exported="false"
+            android:theme="@style/Widget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

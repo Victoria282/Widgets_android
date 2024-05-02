@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/widget_panel_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/large_margin"
+        android:gravity="center_vertical"
+        android:paddingVertical="@dimen/small_margin">
+
+        <ImageView
+            android:id="@+id/date_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_weight="0.1"
+            android:src="@drawable/widget_date_icon" />
+
+        <TextView
+            android:id="@+id/date_value"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="2dp"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:textColor="@color/PrimaryForegroundColor"
+            android:textSize="11dp"
+            tools:text="23.06.23 13:11" />
+
+        <TextView
+            android:id="@+id/status_value"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="2dp"
+            android:layout_weight="4"
+            android:gravity="center_vertical|end"
+            android:text="@string/widget_connection_error"
+            android:textColor="@color/PrimaryForegroundColor"
+            android:textSize="11dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/reload_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="0.1"
+            android:src="@drawable/widget_reload_icon" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:indeterminateTint="@color/PrimaryForegroundColor"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/settings_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="0.1"
+            android:src="@drawable/widget_settings_icon" />
+    </LinearLayout>
+</FrameLayout>

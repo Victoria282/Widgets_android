@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background_light_color">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/screen_background_light_color"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp"
+        app:liftOnScroll="true"
+        app:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:background="@color/screen_background_light_color"
+            app:collapsedTitleGravity="center"
+            app:collapsedTitleTextColor="@color/SecondaryBackgroundColor"
+            app:expandedTitleGravity="bottom|left"
+            app:expandedTitleMarginStart="16dp"
+            app:expandedTitleTextColor="@color/SecondaryBackgroundColor"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            app:title="@string/widget_cash_desk_title">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/screen_background_light_color"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                app:titleEnabled="true" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true">
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/need_auth_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="need_auth_title, need_auth_button" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/content_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="theme_title,
+theme_tab_layout, transparency_title, transparency_bar,
+transparency_value, account_card, period_card, configure_values_title,
+widget_parameters_layout, save_configure_widget" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/need_auth_title"
+                style="@style/Theme.Taxcom.TextRegular16SecondaryBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/extra_large_margin"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/normal_margin"
+                android:text="@string/widget_need_log_in_message"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.8" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/need_auth_button"
+                style="@style/Theme.Cashdesk.Report.GenerateReportButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="42dp"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:background="@null"
+                android:backgroundTint="@color/widget_save_button_state_background"
+                android:enabled="true"
+                android:text="@string/widget_auth_button_text"
+                android:textAllCaps="false"
+                android:textColor="@drawable/widget_save_button_state_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/need_auth_title"
+                app:layout_constraintVertical_bias="1" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/theme_title"
+                style="@style/Theme.Taxcom.TextMedium16SecondaryBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginTop="@dimen/extra_large_margin"
+                android:text="@string/widget_cash_desk_theme_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/theme_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginHorizontal="@dimen/large_margin"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/widget_tab_layout_background"
+                android:fillViewport="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/theme_title"
+                app:tabGravity="fill"
+                app:tabIconTint="@color/widget_tab_icon_tint_background"
+                app:tabIndicator="@drawable/widget_tab_indicator"
+                app:tabIndicatorAnimationMode="elastic"
+                app:tabIndicatorColor="@color/PrimaryForegroundColor"
+                app:tabIndicatorFullWidth="true"
+                app:tabIndicatorGravity="stretch"
+                app:tabIndicatorHeight="0dp"
+                app:tabInlineLabel="true"
+                app:tabMaxWidth="0dp"
+                app:tabMode="fixed"
+                app:tabPaddingEnd="0dp"
+                app:tabPaddingStart="0dp"
+                app:tabRippleColor="@null"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextAppearance="@style/Theme.Taxcom.TextRegular14SecondaryBackground"
+                app:tabTextColor="@color/SecondaryForegroundColor">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/widget_cash_desk_theme_light_title" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/widget_cash_desk_theme_dark_title" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/transparency_title"
+                style="@style/Theme.Taxcom.TextMedium16SecondaryBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="@string/widget_cash_desk_transparency_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/theme_tab_layout" />
+
+            <SeekBar
+                android:id="@+id/transparency_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:maxHeight="4dp"
+                android:progressDrawable="@drawable/seek_bar_style"
+                android:splitTrack="false"
+                android:thumb="@drawable/widget_thumb"
+                app:layout_constraintEnd_toStartOf="@+id/transparency_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/transparency_title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/transparency_value"
+                style="@style/Theme.Taxcom.TextMedium16PrimaryForeground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/large_margin"
+                android:text="@string/start_transparency_value"
+                app:layout_constraintBottom_toBottomOf="@+id/transparency_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/transparency_bar"
+                tools:text="70%" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/account_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/large_margin"
+                android:layout_marginTop="@dimen/extra_large_margin"
+                android:elevation="0dp"
+                app:cardBackgroundColor="@color/screen_background_medium_color"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/transparency_bar">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/large_margin">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/cabinet_title"
+                        style="@style/Theme.Taxcom.TextMedium16SecondaryBackground"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="@dimen/large_margin"
+                        android:layout_marginTop="@dimen/large_margin"
+                        android:drawableEnd="@drawable/widget_arrow_icon"
+                        android:drawablePadding="@dimen/normal_margin"
+                        android:text="@string/widget_cash_desk_cabinet_title"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/cabinet_chip_group"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/large_margin"
+                        android:layout_marginTop="@dimen/normal_margin"
+                        android:visibility="gone"
+                        app:chipMinTouchTargetSize="0dp"
+                        app:chipSpacingHorizontal="@dimen/large_margin"
+                        app:chipSpacingVertical="@dimen/small_margin"
+                        app:ensureMinTouchTargetSize="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cabinet_title" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/division_title"
+                        style="@style/Theme.Taxcom.TextMedium16SecondaryBackground"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="@dimen/large_margin"
+                        android:layout_marginTop="@dimen/normal_margin"
+                        android:drawableEnd="@drawable/widget_arrow_icon"
+                        android:drawablePadding="@dimen/normal_margin"
+                        android:text="@string/widget_cash_desk_division_title"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/bottom_cabinet_line" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/division_chip_group"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/large_margin"
+                        android:layout_marginTop="@dimen/normal_margin"
+                        android:visibility="gone"
+                        app:chipMinTouchTargetSize="0dp"
+                        app:chipSpacingHorizontal="@dimen/large_margin"
+                        app:chipSpacingVertical="@dimen/small_margin"
+                        app:ensureMinTouchTargetSize="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/division_title" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/outlet_title"
+                        style="@style/Theme.Taxcom.TextMedium16SecondaryBackground"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="@dimen/large_margin"
+                        android:layout_marginTop="@dimen/normal_margin"
+                        android:drawableEnd="@drawable/widget_arrow_icon"
+                        android:drawablePadding="@dimen/normal_margin"
+                        android:text="@string/widget_cash_desk_outlet_title"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/bottom_division_line" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/outlet_chip_group"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/large_margin"
+                        android:layout_marginTop="@dimen/normal_margin"
+                        android:visibility="gone"
+                        app:chipMinTouchTargetSize="0dp"
+                        app:chipSpacingHorizontal="@dimen/large_margin"
+                        app:chipSpacingVertical="@dimen/small_margin"
+                        app:ensureMinTouchTargetSize="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/outlet_title" />
+
+                    <View
+                        android:id="@+id/bottom_cabinet_line"
+                        android:layout_width="0dp"
+                        android:layout_height="0.5dp"
+                        android:layout_margin="@dimen/large_margin"
+                        android:background="@color/fouth_to_secondary_color"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cabinet_chip_group" />
+
+                    <View
+                        android:id="@+id/bottom_division_line"
+                        android:layout_width="0dp"
+                        android:layout_height="0.5dp"
+                        android:layout_margin="@dimen/large_margin"
+                        android:background="@color/fouth_to_secondary_color"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/division_chip_group" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/period_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/large_margin"
+                android:elevation="0dp"
+                app:cardBackgroundColor="@color/screen_background_medium_color"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/account_card">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/period_title"
+                        style="@style/Theme.Taxcom.TextMedium16SecondaryBackground"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/large_margin"
+                        android:drawablePadding="@dimen/normal_margin"
+                        android:text="@string/widget_cash_desk_period_title"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/period_chip_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/large_margin"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="20dp"
+                        app:chipMinTouchTargetSize="0dp"
+                        app:chipSpacingHorizontal="8dp"
+                        app:chipSpacingVertical="8dp"
+                        app:ensureMinTouchTargetSize="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/period_title"
+                        app:selectionRequired="true"
+                        app:singleLine="false"
+                        app:singleSelection="true" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/configure_values_title"
+                style="@style/Theme.Taxcom.TextRegular14SecondForeground"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginTop="@dimen/extra_large_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/period_card"
+                tools:text="@string/widget_cash_desk_values_medium_widget_title" />
+
+            <include
+                android:id="@+id/widget_parameters_layout"
+                layout="@layout/widget_parameters_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/large_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/configure_values_title" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/configure_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="configure_values_title, widget_parameters_layout"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save_configure_widget"
+                style="@style/Theme.Cashdesk.Report.GenerateReportButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="42dp"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginBottom="@dimen/large_margin"
+                android:background="@null"
+                android:backgroundTint="@color/widget_save_button_state_background"
+                android:enabled="false"
+                android:text="@string/widget_cash_desk_save_button_title"
+                android:textAllCaps="false"
+                android:textColor="@drawable/widget_save_button_state_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/widget_parameters_layout"
+                app:layout_constraintVertical_bias="1" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@color/PrimaryForegroundColor"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

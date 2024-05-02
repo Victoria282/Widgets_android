@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/medium_header_widget" />
+
+    <TextView
+        android:id="@+id/revenue_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/large_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:text="@string/casdesk_kit_indicator_revenue_caption"
+        android:textColor="@color/SecondaryForegroundColor"
+        android:textSize="12dp" />
+
+    <ImageView
+        android:layout_width="156dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="@dimen/large_margin"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/widget_blur_gray_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/count_receipts_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:text="@string/casdesk_kit_indicator_number_of_checks"
+                android:textColor="@color/SecondaryForegroundColor"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/widget_blur_gray_view" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/avg_receipts_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:text="@string/casdesk_kit_indicator_average_revenue"
+                android:textColor="@color/SecondaryForegroundColor"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:layout_width="93dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/widget_blur_gray_view" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/midl_margin"
+        android:background="@color/FourthForegroundColor" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/midl_margin"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/update_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_margin"
+            android:text="Обновлено"
+            android:textColor="@color/SecondaryForegroundColor"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:layout_width="84dp"
+            android:layout_height="12dp"
+            android:layout_alignTop="@+id/update_title"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_toEndOf="@+id/update_title"
+            android:background="@drawable/widget_blur_gray_view" />
+
+        <ImageView
+            android:id="@+id/reload_shimmer_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignTop="@+id/update_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:src="@drawable/widget_reload_icon" />
+    </RelativeLayout>
+</LinearLayout>

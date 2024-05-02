@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <include layout="@layout/small_header_widget" />
+
+    <TextView
+        android:id="@+id/revenue_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:text="@string/casdesk_kit_indicator_revenue_caption"
+        android:textColor="@color/ThirdForegroundColor"
+        android:textSize="10dp" />
+
+    <ImageView
+        android:layout_width="112dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/widget_blur_dark_gray_view" />
+
+    <TextView
+        android:id="@+id/avg_receipts_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:text="@string/casdesk_kit_indicator_average_revenue"
+        android:textColor="@color/ThirdForegroundColor"
+        android:textSize="10dp" />
+
+    <ImageView
+        android:layout_width="112dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/widget_blur_dark_gray_view" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="43dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/widget_blur_blue_view" />
+
+        <ImageView
+            android:id="@+id/reload_shimmer_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:src="@drawable/widget_reload_icon" />
+
+    </RelativeLayout>
+</LinearLayout>

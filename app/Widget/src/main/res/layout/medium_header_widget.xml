@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/TransparentColor"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/large_margin"
+    android:paddingTop="@dimen/large_margin">
+
+    <ImageView
+        android:id="@+id/logo_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/widget_logo_icon" />
+
+    <TextView
+        android:id="@+id/cabinet_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="6dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_bold"
+        android:maxLines="1"
+        android:text="@string/widget_default_title"
+        android:textColor="@color/PrimaryForegroundColor"
+        android:textSize="16dp" />
+</LinearLayout>

@@ -1,0 +1,192 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/widget_background_dark" />
+
+    <include
+        android:id="@+id/widget_info"
+        layout="@layout/widget_dark_info_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/small_header_widget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:visibility="visible"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:id="@+id/revenue_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/revenue_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:text="@string/casdesk_kit_indicator_revenue"
+                    android:textColor="@color/ThirdForegroundColor"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/revenue_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    tools:text="4 555 035,93 ₽" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/receipts_avg_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/avg_receipts_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/casdesk_kit_indicator_average_revenue"
+                    android:textColor="@color/ThirdForegroundColor"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/avg_receipts_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    tools:text="1, 450 ₽" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/refund_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/refund_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:text="@string/casdesk_kit_indicator_refund_title"
+                    android:textColor="@color/ThirdForegroundColor"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/refund_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    tools:text="4 555 035,93 ₽" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/receipts_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/count_receipts_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/casdesk_kit_indicator_number_of_checks"
+                    android:textColor="@color/ThirdForegroundColor"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/count_receipts_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    tools:text="1 687" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/date_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            android:padding="6dp"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/date_value"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="center_vertical"
+                android:layout_marginStart="@dimen/small_margin"
+                android:textColor="@color/PrimaryForegroundColor"
+                android:textSize="11dp"
+                tools:text="23.06 13:11" />
+
+            <ImageView
+                android:id="@+id/reload_icon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/widget_reload_icon" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:indeterminateTint="@color/PrimaryForegroundColor"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/settings_icon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/widget_settings_icon" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/blur_group"
+        layout="@layout/small_cash_desk_widget_blur_dark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

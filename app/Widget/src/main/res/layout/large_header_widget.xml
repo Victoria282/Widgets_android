@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/TransparentColor"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/large_margin"
+    android:paddingTop="@dimen/normal_margin">
+
+    <ImageView
+        android:id="@+id/logo_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/widget_logo_icon" />
+
+    <TextView
+        android:id="@+id/cabinet_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_bold"
+        android:maxLines="1"
+        android:textColor="@color/PrimaryForegroundColor"
+        android:textSize="16dp"
+        tools:text="ИП Лященко Алексей Александрович" />
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:gravity="center"
+        tools:text="@string/widget_cash_desk_auth_title"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/auth_button"
+        style="@style/Theme.Cashdesk.Report.GenerateReportButton"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginVertical="@dimen/normal_margin"
+        android:background="@drawable/widget_auth_button_background"
+        android:text="@string/widget_cash_desk_auth_button"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
+</LinearLayout>

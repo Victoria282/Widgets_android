@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <include layout="@layout/large_header_widget" />
+
+    <TextView
+        android:id="@+id/revenue_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/large_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:text="@string/casdesk_kit_indicator_revenue_caption"
+        android:textColor="@color/ThirdForegroundColor"
+        android:textSize="12dp" />
+
+    <ImageView
+        android:layout_width="156dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="@dimen/large_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:background="@drawable/widget_blur_dark_gray_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/card_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:text="@string/casdesk_kit_indicator_cashless_payment"
+                android:textColor="@color/ThirdForegroundColor"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:layout_width="46dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:background="@drawable/widget_blur_dark_gray_view" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cash_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/large_margin"
+                android:text="@string/casdesk_kit_indicator_cash_payment"
+                android:textColor="@color/ThirdForegroundColor"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:layout_width="46dp"
+                android:layout_height="16dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/large_margin"
+                android:background="@drawable/widget_blur_dark_gray_view" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_view"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/large_margin"
+        android:layout_marginVertical="@dimen/normal_margin"
+        android:progress="25"
+        android:progressDrawable="@drawable/progress_drawable" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/large_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/card_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/card_icon" />
+
+        <ImageView
+            android:layout_width="74dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="@dimen/small_margin"
+            android:background="@drawable/widget_blur_dark_gray_view" />
+
+        <ImageView
+            android:layout_width="74dp"
+            android:layout_height="16dp"
+            android:layout_weight="2"
+            android:background="@color/TransparentColor" />
+
+        <ImageView
+            android:layout_width="74dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:background="@drawable/widget_blur_dark_gray_view" />
+
+        <ImageView
+            android:id="@+id/cash_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cash_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/refund_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/large_margin"
+        android:layout_marginTop="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/refund_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:text="@string/casdesk_kit_indicator_refund_title"
+            android:textColor="@color/ThirdForegroundColor"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:layout_width="85dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_weight="0.5"
+            android:background="@drawable/widget_blur_dark_gray_view" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/receipts_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/large_margin"
+        android:layout_marginTop="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/count_receipts_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.7"
+            android:text="@string/casdesk_kit_indicator_number_of_checks"
+            android:textColor="@color/ThirdForegroundColor"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_weight="0.3"
+            android:background="@drawable/widget_blur_dark_gray_view" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/receipts_avg_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/large_margin"
+        android:layout_marginTop="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/avg_receipts_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.6"
+            android:text="@string/casdesk_kit_indicator_average_revenue"
+            android:textColor="@color/ThirdForegroundColor"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_weight="0.4"
+            android:background="@drawable/widget_blur_dark_gray_view" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/small_margin"
+        android:background="@color/FourthForegroundColor" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/small_margin">
+
+        <TextView
+            android:id="@+id/update_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_margin"
+            android:text="Обновлено"
+            android:textColor="@color/ThirdForegroundColor"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:layout_width="84dp"
+            android:layout_height="12dp"
+            android:layout_alignTop="@+id/update_title"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_toEndOf="@+id/update_title"
+            android:background="@drawable/widget_blur_dark_gray_view" />
+
+        <ImageView
+            android:id="@+id/reload_shimmer_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignTop="@+id/update_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:src="@drawable/widget_reload_icon"
+            android:tint="@color/white" />
+    </RelativeLayout>
+</LinearLayout>

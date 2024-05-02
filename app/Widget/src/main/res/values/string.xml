@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start_transparency_value">0%</string>
+    <string name="widget_default_title">Такском-Касса</string>
+    <string name="widget_cash_desk_title">Настройки виджета</string>
+    <string name="widget_cash_desk_values_medium_widget_title">Показатели (от 1 до 3)</string>
+    <string name="widget_cash_desk_values_small_widget_title">Показатели (от 1 до 2)</string>
+    <string name="widget_cash_desk_theme_title">Тема</string>
+    <string name="widget_cash_desk_period_title">Период</string>
+    <string name="widget_cash_desk_theme_light_title">Светлая</string>
+    <string name="widget_cash_desk_theme_dark_title">Темная</string>
+    <string name="widget_cash_desk_transparency_title">Прозрачность</string>
+    <string name="widget_cash_desk_cabinet_title">Кабинет </string>
+    <string name="widget_cash_desk_division_title">Подразделение</string>
+    <string name="widget_cash_desk_outlet_title">Торговая точка </string>
+    <string name="widget_cash_desk_save_button_title">Сохранить</string>
+    <string name="widget_cash_desk_auth_title">Авторизуйтесь в приложении</string>
+    <string name="widget_auth_button_text">Авторизоваться</string>
+    <string name="widget_cash_desk_auth_button">Войти</string>
+    <string name="widget_percent_value">%1$d %%</string>
+    <string name="widget_connection_error">Ошибка сети</string>
+    <string name="widget_error">Ошибка загрузки данных</string>
+    <string name="widget_not_configured_subtitle">Для корректной работы необходимо настроить виджет</string>
+    <string name="casdesk_kit_indicator_cash_payment">Оплата наличными (₽)</string>
+    <string name="casdesk_kit_indicator_cashless_payment">Безналичный расчёт (₽)</string>
+    <string name="widget_no_access_message">У вас нет доступа к просмотру статистики.\nОбратитесь к администратору кабинета.</string>
+    <string name="widget_need_log_in_message">Для продолжения работы с виджетом необходимо выполнить авторизацию в приложении Такском Касса</string>
+</resources>

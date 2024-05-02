@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
+
+    <style name="Widget.CheckBoxStyle" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/PrimaryForegroundColor</item>
+    </style>
+</resources>

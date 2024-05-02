@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:configure="ru.taxcom.widget.ui.activity.CashDeskMediumWidgetActivity"
+    android:description="@string/widget_cash_desk_title"
+    android:initialKeyguardLayout="@layout/medium_cash_desk_widget"
+    android:initialLayout="@layout/medium_cash_desk_widget"
+    android:minWidth="250dp"
+    android:minHeight="110dp"
+    android:previewImage="@drawable/medium_cash_desk_widget_preview"
+    android:resizeMode="none"
+    android:widgetCategory="home_screen" />
